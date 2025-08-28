@@ -150,7 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
         text: message,
       }),
     })
-      .then((res) => {})
+      .then((res) => {
+        window.location.href = "/thankPage.html";
+      })
       .catch((error) => {
         console.log(error);
       });
@@ -175,8 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
       commentText,
     ];
 
-    console.log(inputContents);
-
     let message = inputContents.join("\n");
     fetch(URI_API, {
       method: "POST",
@@ -189,7 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
         text: message,
       }),
     })
-      .then((res) => {})
+      .then((res) => {
+        window.location.href = "/thankPage.html";
+      })
       .catch((error) => {
         console.log(error);
       });
