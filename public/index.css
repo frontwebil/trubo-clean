@@ -1,0 +1,27 @@
+@import url(/css/general.css);
+@import url(/css/reset.css);
+@import url(/css/header.css);
+@import url(/css/hero.css);
+@import url(/css/what-clean.css);
+@import url(/css/about-us-and-advantages.css);
+@import url(/css/gallery.css);
+@import url(/css/contact-us.css);
+@import url(/css/footer.css);
+
+* {
+  font-family: "Manrope", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+body {
+  position: relative;
+  background: #151413;
+  background-image: url(/images/bg/bg-bricks.png);
+  background-size: cover;
+  background-position: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}

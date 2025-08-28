@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="TruboClean — професійна чистка димоходів, камінів та котлів у Києві та області. Оперативний виїзд, гарантія безпеки та чистоти. Замовляйте чистку вже зараз!"
+    />
+    <meta
+      name="keywords"
+      content="чистка димоходів, чистка камінів, чистка котлів, Київ, TruboClean, прочистка димоходу, чистка вентиляції"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="TruboClean — чистка димоходів, камінів та котлів"
+    />
+    <meta
+      property="og:description"
+      content="Професійна чистка димоходів, камінів і котлів у Києві та області. Надійно, швидко та безпечно."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://truboclean.vercel.app/" />
+    <meta property="og:image" content="/preview.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="TruboClean — чистка димоходів, камінів та котлів"
+    />
+    <meta
+      name="twitter:description"
+      content="Професійна чистка димоходів, камінів та котлів у Києві та області."
+    />
+    <meta name="twitter:image" content="/preview.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="/images/Logo.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      />
+    </noscript>
+    <title>Trubo Clean</title>
+  </head>
+  <body>
+    <div class="form" id="form" style="display: none">
+      <div class="form-container-wrapper">
+        <form class="contact-us-form" id="orderFormModal">
+          <div>
+            <h2 class="text-l font-jakarta font-bold">Замовити послугу</h2>
+            <p class="text-xxs" style="color: #c5c3c1">
+              Заповніть форму і ми зв'яжемося з вами протягом 15 хвилин
+            </p>
+
+            <div class="inputs">
+              <div class="form-container">
+                <label for="name">Ім’я*</label>
+                <input
+                  type="text"
+                  placeholder="Ваше ім'я"
+                  name="name"
+                  required
+                  id="modal-input-name"
+                />
+              </div>
+
+              <div class="form-container">
+                <label for="phone">Телефон*</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+38 (0XX) XXX-XX-XX"
+                  required
+                  id="modal-input-phone"
+                />
+              </div>
+            </div>
+          </div>
+          <button class="submit-form" type="submit">Надіслати заявку</button>
+        </form>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="header-left-side">
+          <div class="logo">
+            <img src="/images/Logo.svg" alt="TruboClean" />
+            <p class="text-lg font-bold">
+              <span class="orange font-bold">Trubo</span>Clean
+            </p>
+          </div>
+          <nav class="header-nav">
+            <a href="#about-us" class="text-xxs font-medium">Про нас</a>
+            <a href="#services" class="text-xxs font-medium">Послуги</a>
+            <a href="#resaults" class="text-xxs font-medium">Результати</a>
+            <a href="#contacts" class="text-xxs font-medium">Контакти</a>
+          </nav>
+        </div>
+        <div class="header-right-side">
+          <div class="mobile-phones-links">
+            <a href="tel:+380663633628" class="text-xxs font-semibold"
+              >+38 (066) 363 36 28</a
+            >
+            <a href="tel:+380733733728" class="text-xxs font-semibold"
+              >+38 (073) 373 37 28</a
+            >
+          </div>
+          <div class="burger-button">
+            <div class="burger-button-line"></div>
+            <div class="burger-button-line"></div>
+            <div class="burger-button-line"></div>
+          </div>
+          <button class="order-clean text-xxs font-semibold openModal">
+            Замовити чистку
+          </button>
+        </div>
+      </div>
+      <div class="header-mobile-phones">
+        <a href="tel:+380663633628" class="text-xxs font-semibold"
+          >+38 (066) 363 36 28</a
+        >
+        <a href="tel:+380733733728" class="text-xxs font-semibold"
+          >+38 (073) 373 37 28</a
+        >
+      </div>
+      <div class="burger-sliding-menu">
+        <nav class="header-nav-mobile">
+          <a href="#about-us" class="text-xxs font-medium burger-buttons"
+            >Про нас</a
+          >
+          <a href="#services" class="text-xxs font-medium burger-buttons"
+            >Послуги</a
+          >
+          <a href="#resaults" class="text-xxs font-medium burger-buttons"
+            >Результати</a
+          >
+          <a href="#contacts" class="text-xxs font-medium burger-buttons"
+            >Контакти</a
+          >
+          <button class="openModal burger-button-order burger-buttons">
+            Замовити чистку
+          </button>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="text-xxl font-bold font-jakarta">
+            <span class="orange font-bold">Trubo</span>Clean — ваш надійний
+            трубочист у Києві та київській області
+          </h1>
+          <p class="text-sm font-medium" style="color: #c5c3c1">
+            Майстри TruboClean — експерти з обслуговування димоходів, котлів і
+            вентиляційних систем. Оперативний виїзд. Гарантуємо чистоту та
+            безпеку.
+          </p>
+          <div class="hero-buttons">
+            <button class="hero-order-clean text-xxs font-medium openModal">
+              Замовити чистку
+            </button>
+            <button class="hero-call-me text-xxs font-medium openModal">
+              Передзвоніть мені
+            </button>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img
+            src="/images/hero/hero.webp"
+            alt="Чистка димоходів, котлів та камінів у Києві"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="about-us-and-advantages" id="about-us">
+      <div class="container">
+        <img
+          src="/images/advantages/Ellipse-1.png"
+          alt=""
+          class="elipse-about-us-and-advantages"
+          aria-hidden="true"
+          loading="lazy"
+        />
+        <img
+          src="/images/advantages/Ellipse-2.png"
+          alt=""
+          class="elipse-about-us-and-advantages-light"
+          aria-hidden="true"
+          loading="lazy"
+        />
+        <img
+          src="/images/advantages/Ellipse-3.png"
+          alt=""
+          class="elipse-about-us-and-advantages-bottom"
+          aria-hidden="true"
+          loading="lazy"
+        />
+
+        <div class="about-us">
+          <h2 class="text-xl font-jakarta font-bold">Про нас</h2>
+          <p class="text-xxs" style="color: #c5c3c1">
+            Ми понад 10 років допомагаємо мешканцям Києва та області
+            підтримувати свої димоходи, котли, каміни та вентиляційні системи в
+            ідеальному стані. Наша команда — це досвідчені майстри, які працюють
+            швидко, безпечно та без зайвого бруду. <br /><br />
+            Ми застосовуємо сучасний роторний метод чистки — спеціальні гнучкі
+            штанги з обертовими насадками, які ефективно видаляють сажу, смолу
+            та інші відкладення навіть у важкодоступних місцях.
+          </p>
+        </div>
+        <div class="section-title">
+          <h2 class="text-l font-jakarta font-bold">
+            <span class="orange font-bold">Trubo</span>Clean — це не просто
+            чистка. Це:
+          </h2>
+        </div>
+        <div class="advantages">
+          <div class="advantages-card">
+            <img src="/images/advantages/1.svg" alt="Оперативний виїзд" />
+            <h3 class="text-sm">Оперативний виїзд</h3>
+            <p class="text-xxs">
+              Приїдемо в день звернення по Києву та області, бо розуміємо, що
+              несправний димохід чи котел чекати не можуть.
+            </p>
+          </div>
+          <div class="advantages-card">
+            <img
+              src="/images/advantages/2.svg"
+              alt="Спеціальні умови для організацій"
+            />
+            <h3 class="text-sm">Спеціальні умови для організацій</h3>
+            <p class="text-xxs">
+              Вигідні пропозиції для садових товариств і підприємств: колективні
+              замовлення зі знижками та обслуговування за договором.
+            </p>
+          </div>
+          <div class="advantages-card">
+            <img
+              src="/images/advantages/3.svg"
+              alt="Дотримання пожежної безпеки"
+            />
+            <h3 class="text-sm">Дотримання пожежної безпеки</h3>
+            <p class="text-xxs">
+              працюємо строго за нормами, щоб ваш димохід і обладнання були не
+              лише чистими, а й безпечними у використанні.
+            </p>
+          </div>
+          <div class="advantages-card">
+            <img src="/images/advantages/4.svg" alt="Чистка без пилу" />
+            <h3 class="text-sm">Чистка без пилу</h3>
+            <p class="text-xxs">
+              Використовуємо професійні HEPA-пилососи та захисні матеріали, тому
+              в приміщенні не залишиться ані граму бруду.
+            </p>
+          </div>
+          <div class="advantages-card">
+            <img
+              src="/images/advantages/5.svg"
+              alt="Гарантія на виконані роботи"
+            />
+            <h3 class="text-sm">Гарантія на виконані роботи</h3>
+            <p class="text-xxs">
+              Закріплюємо результат гарантією, ділимось порадами щодо догляду та
+              допомагаємо продовжити термін служби вашого обладнання
+            </p>
+          </div>
+          <div class="advantages-card">
+            <img
+              src="/images/advantages/6.svg"
+              alt="Фото та відеозвіт до/після роботи"
+            />
+            <h3 class="text-sm">Фото та відеозвіт до/після роботи</h3>
+            <p class="text-xxs">
+              Кожен клієнт отримує реальні знімки “до” і “після” роботи, щоб ви
+              бачили різницю і були впевнені в результаті.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="what-clean" id="services">
+      <div class="section-title">
+        <h2 class="text-l font-jakarta font-bold">Що ми чистимо:</h2>
+      </div>
+      <img
+        src="/images/what-clean/Ellipse 1.png"
+        alt=""
+        class="elipse-what-clean-center"
+        loading="lazy"
+        aria-hidden="true"
+      />
+      <div class="container">
+        <div class="what-clean-img">
+          <img src="/images/what-clean/main.webp" alt="Що ми чистимо" />
+        </div>
+        <ul class="what-clean-column">
+          <li class="what-clean-row text-sm font-jakarta font-bold">
+            Димоходи будь-якого типу: цегляні, металеві, сендвіч;
+          </li>
+          <li class="what-clean-row text-sm font-jakarta font-bold">
+            Твердопаливні котли (пелетні, дров’яні, комбіновані);
+          </li>
+          <li class="what-clean-row text-sm font-jakarta font-bold">
+            Камінні системи та печі;
+          </li>
+          <li class="what-clean-row text-sm font-jakarta font-bold">
+            Видалення сажі, смоли та сторонніх предметів;
+          </li>
+          <li class="what-clean-row text-sm font-jakarta font-bold">
+            Вентиляційні системи;
+          </li>
+          <li class="what-clean-row text-sm font-jakarta font-bold">
+            Відеоінспекція димоходів;
+          </li>
+          <li class="what-clean-row text-sm font-jakarta font-bold">
+            Консультації та профілактичні роботи.
+          </li>
+        </ul>
+      </div>
+      <div class="what-clean-extra">
+        <p class="text-xxs font-jakarta font-bold">
+          💡 Для садових товариств — знижки при колективних замовленнях
+        </p>
+        <div class="what-clean-extra-line"></div>
+        <p class="text-xxs font-jakarta font-bold">
+          💼 Для великих підприємств — обслуговування за договором
+        </p>
+      </div>
+    </section>
+    <section class="gallerery" id="resaults">
+      <div class="container">
+        <div class="gallerery-top">
+          <h2 class="text-xl font-bold">
+            <span class="orange font-bold font-jakarta">Trubo</span>Clean у дії
+          </h2>
+          <div class="gallerery-top-buttons">
+            <div class="gallerery-top-button-left">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <path d="m0 0h32v32h-32z" />
+                  <path
+                    fill="currentColor"
+                    d="m9.88528137 7.48578644 1.41421353 1.41421356-6.0994949 6.0997864 25.4426407.0002136v2l-25.4286407-.0002136 6.0854949 6.085495-1.41421353 1.4142135-8.48528137-8.4852813.022-.0214272-.022-.0217186z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="gallerery-top-button-right active">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <path d="m0 0h32v32h-32z" />
+                  <path
+                    fill="currentColor"
+                    d="m9.88528137 7.48578644 1.41421353 1.41421356-6.0994949 6.0997864 25.4426407.0002136v2l-25.4286407-.0002136 6.0854949 6.085495-1.41421353 1.4142135-8.48528137-8.4852813.022-.0214272-.022-.0217186z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="gallerery-slider">
+          <div class="gallerery-slide">
+            <img
+              src="/images/gallery/1.webp"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+            />
+          </div>
+          <div class="gallerery-slide">
+            <img
+              src="/images/gallery/2.webp"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+            />
+          </div>
+          <div class="gallerery-slide">
+            <img
+              src="/images/gallery/3.webp"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+        <div class="gallerery-slider-mobile"></div>
+        <!-- <a href="#" class="more-photos-button text-xxs font-semibold"
+          >Більше фото у нашому Instagram</a
+        > -->
+      </div>
+    </section>
+    <section class="contact-us" id="contacts">
+      <img
+        src="/images/contact/Ellipse 1.png"
+        alt=""
+        class="elipse-contact"
+        loading="lazy"
+        aria-hidden="true"
+      />
+      <div class="section-title" style="padding: 0 15px">
+        <h2 class="text-l font-jakarta font-bold">Зв'яжіться з нами</h2>
+        <p class="text-sm">
+          Готові відповісти на всі ваші запитання та приїхати у зручний час.
+          Залишайте заявку або телефонуйте прямо зараз!
+        </p>
+      </div>
+      <div class="container">
+        <form class="contact-us-form" id="contact-us-form">
+          <div>
+            <h2 class="text-l font-jakarta font-bold">Замовити послугу</h2>
+            <p class="text-xxs" style="color: #c5c3c1">
+              Заповніть форму і ми зв'яжемося з вами протягом 15 хвилин
+            </p>
+
+            <div class="inputs">
+              <div class="form-container">
+                <p>Ім’я*</p>
+                <input
+                  type="text"
+                  placeholder="Ваше ім'я"
+                  name="name"
+                  id="contact-us-input-name"
+                />
+              </div>
+
+              <div class="form-container">
+                <p>Телефон*</p>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+38 (0XX) XXX-XX-XX"
+                  required
+                  id="contact-us-input-phone"
+                />
+              </div>
+
+              <div class="form-container">
+                <p>Коментар</p>
+                <textarea
+                  rows="6"
+                  placeholder="Введіть текст"
+                  style="resize: none"
+                  name="comment"
+                  id="contact-us-input-comment"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <button class="submit-form" type="submit">Надіслати заявку</button>
+        </form>
+        <div class="contacts">
+          <div class="contact-card">
+            <h2 class="text-sm font-bold">Телефон:</h2>
+            <div class="phones">
+              <div class="phone-column">
+                <p class="text-xxs">Lifecell:</p>
+                <a
+                  href="tel:+380733733728"
+                  class="text-sm font-bold"
+                  style="color: #ff6745"
+                  >+38 (073) 373 37 28</a
+                >
+              </div>
+              <div class="phone-column">
+                <p class="text-xxs">Vodafone:</p>
+                <a
+                  href="tel:+38(066)3633628"
+                  class="text-sm font-bold"
+                  style="color: #ff6745"
+                  >+38 (066) 363 36 28</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h2 class="text-sm font-bold">Зона обслуговування:</h2>
+            <p class="text-xxs font-bold" style="color: #ff6745">
+              Київ та київська область
+            </p>
+          </div>
+          <div class="contact-card">
+            <h2 class="text-sm font-bold">Режим роботи:</h2>
+            <p class="text-xxs font-bold" style="color: #c5c3c1">
+              <span style="color: #ff6745">24/7</span> (Без вихідних та свят)
+            </p>
+          </div>
+          <div class="contact-card">
+            <h2 class="text-sm font-bold" style="text-align: center">
+              Або напишіть нам у месенджер:
+            </h2>
+            <div class="contact-social">
+              <a href="https://t.me/vlad_3113" class="contact">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_48_67)">
+                    <path
+                      d="M12.4417 0C9.13658 0.0154239 5.97212 1.33919 3.64052 3.68173C1.30891 6.02426 -3.59886e-05 9.19488 7.4212e-10 12.5C7.42126e-10 15.8152 1.31696 18.9946 3.66116 21.3388C6.00537 23.683 9.18479 25 12.5 25C15.8152 25 18.9946 23.683 21.3388 21.3388C23.683 18.9946 25 15.8152 25 12.5C25 9.18479 23.683 6.00537 21.3388 3.66116C18.9946 1.31696 15.8152 0 12.5 0L12.4417 0ZM17.6104 7.525C17.7146 7.52292 17.9448 7.54896 18.0948 7.67083C18.195 7.757 18.2586 7.87802 18.2729 8.00937C18.2896 8.10625 18.3104 8.32812 18.2937 8.50104C18.1062 10.4781 17.2917 15.274 16.8771 17.4875C16.7021 18.425 16.3573 18.7385 16.0229 18.7687C15.2979 18.8365 14.7469 18.2896 14.0437 17.8292C12.9437 17.1073 12.3219 16.6583 11.2542 15.9542C10.0198 15.1417 10.8198 14.6938 11.5229 13.9646C11.7073 13.7729 14.9052 10.8635 14.9677 10.6C14.975 10.5667 14.9823 10.4437 14.9094 10.3792C14.8365 10.3146 14.7281 10.3365 14.65 10.3542C14.5396 10.3799 12.7823 11.5413 9.37813 13.8385C8.87813 14.1823 8.42604 14.349 8.02188 14.3385C7.57604 14.3302 6.71771 14.0875 6.07917 13.8802C5.29583 13.625 4.67396 13.4906 4.72812 13.0583C4.7559 12.8333 5.06597 12.6031 5.65833 12.3677C9.30208 10.7802 11.7319 9.73368 12.9479 9.22812C16.4187 7.78437 17.1406 7.53333 17.6104 7.525Z"
+                      fill="#151413"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_48_67">
+                      <rect width="25" height="25" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <p class="text-xxs form-container">Telegram</p>
+              </a>
+              <a href="https://msng.link/o?0663633628=vi" class="contact">
+                <svg
+                  width="23"
+                  height="25"
+                  viewBox="0 0 23 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.3454 0.644109C13.4956 -0.214703 9.50321 -0.214703 5.65338 0.644109L5.23856 0.735696C4.15536 0.976669 3.16042 1.51293 2.36452 2.28478C1.56862 3.05663 1.003 4.03378 0.730623 5.10743C-0.243541 8.94515 -0.243541 12.9647 0.730623 16.8024C0.99041 17.8263 1.51716 18.7634 2.25734 19.5184C2.99753 20.2734 3.92478 20.8193 4.94489 21.1009L5.51389 24.4908C5.53205 24.5985 5.5788 24.6993 5.64926 24.7828C5.71973 24.8663 5.81133 24.9294 5.91454 24.9655C6.01775 25.0017 6.12878 25.0096 6.23608 24.9884C6.34338 24.9672 6.44302 24.9176 6.52462 24.8449L9.86642 21.8617C12.375 22.0128 14.8924 21.8126 17.3454 21.267L17.7614 21.1754C18.8446 20.9344 19.8396 20.3981 20.6355 19.6263C21.4314 18.8544 21.997 17.8773 22.2694 16.8036C23.2435 12.9659 23.2435 8.94637 22.2694 5.10865C21.9969 4.03484 21.4311 3.05759 20.635 2.28572C19.8388 1.51386 18.8436 0.977689 17.7602 0.736917L17.3454 0.644109ZM6.68615 5.00852C6.45872 4.97528 6.22676 5.02098 6.02904 5.13796H6.01191C5.55304 5.40661 5.13945 5.74487 4.78703 6.14297C4.49336 6.48123 4.33428 6.82315 4.29268 7.15286C4.26821 7.34825 4.28534 7.54607 4.34285 7.73291L4.36487 7.74512C4.69526 8.7135 5.12599 9.64524 5.65216 10.522C6.33091 11.7534 7.16579 12.8923 8.13617 13.9107L8.16554 13.9523L8.21204 13.9864L8.24018 14.0194L8.27445 14.0487C9.29862 15.0199 10.4426 15.8571 11.6787 16.5399C13.092 17.308 13.9498 17.6707 14.4649 17.8221V17.8294C14.6154 17.8758 14.7525 17.8966 14.8907 17.8966C15.3297 17.8652 15.7453 17.6871 16.0703 17.391C16.468 17.0393 16.8045 16.6254 17.0664 16.165V16.1564C17.3124 15.6924 17.2291 15.2552 16.8743 14.9585C16.1621 14.3362 15.3913 13.7841 14.5726 13.3099C14.0244 13.0132 13.4676 13.1927 13.2425 13.4931L12.7616 14.0988C12.5144 14.3992 12.0666 14.3577 12.0666 14.3577L12.0543 14.365C8.71252 13.5139 7.82047 10.1374 7.82047 10.1374C7.82047 10.1374 7.77887 9.67821 8.08845 9.44375L8.69049 8.96017C8.97927 8.72571 9.17995 8.17131 8.87037 7.62423C8.39629 6.8078 7.84431 6.03897 7.22211 5.32846C7.086 5.16162 6.89539 5.04792 6.6837 5.00729M12.3321 3.54069C12.1698 3.54069 12.0142 3.60502 11.8995 3.71952C11.7847 3.83403 11.7203 3.98933 11.7203 4.15127C11.7203 4.3132 11.7847 4.4685 11.8995 4.58301C12.0142 4.69751 12.1698 4.76184 12.3321 4.76184C13.88 4.76184 15.1648 5.26618 16.1817 6.23333C16.7042 6.76209 17.1117 7.38855 17.3784 8.07483C17.6464 8.76234 17.7688 9.49626 17.737 10.2314C17.7336 10.3116 17.7461 10.3916 17.7737 10.467C17.8013 10.5424 17.8436 10.6116 17.898 10.6706C18.0079 10.79 18.1608 10.8608 18.3231 10.8676C18.4854 10.8744 18.6437 10.8166 18.7632 10.7069C18.8828 10.5972 18.9538 10.4446 18.9606 10.2827C18.9971 9.37849 18.8468 8.47647 18.5189 7.63278C18.1895 6.78479 17.6879 6.01397 17.0456 5.36876L17.0334 5.35654C15.7718 4.15371 14.1749 3.54069 12.3321 3.54069ZM12.2905 5.54827C12.1282 5.54827 11.9726 5.61259 11.8579 5.7271C11.7431 5.84161 11.6787 5.99691 11.6787 6.15884C11.6787 6.32078 11.7431 6.47608 11.8579 6.59059C11.9726 6.70509 12.1282 6.76942 12.2905 6.76942H12.3113C13.4273 6.8488 14.2398 7.22003 14.8088 7.82938C15.3924 8.45706 15.6947 9.23737 15.6714 10.2021C15.6677 10.364 15.7286 10.5208 15.8407 10.6379C15.9528 10.7551 16.1069 10.823 16.2692 10.8267C16.4315 10.8304 16.5886 10.7697 16.7059 10.6578C16.8233 10.5459 16.8914 10.3921 16.8951 10.2302C16.9245 8.96383 16.5158 7.8709 15.7057 6.999V6.99655C14.8773 6.11 13.7405 5.64107 12.3725 5.54949L12.3517 5.54704L12.2905 5.54827ZM12.2672 7.5937C12.1854 7.58649 12.1029 7.59582 12.0247 7.62113C11.9465 7.64644 11.8742 7.68721 11.8122 7.74102C11.7501 7.79482 11.6996 7.86055 11.6635 7.93428C11.6275 8.00801 11.6067 8.08822 11.6025 8.17014C11.5982 8.25206 11.6105 8.334 11.6386 8.41107C11.6668 8.48813 11.7102 8.55875 11.7663 8.6187C11.8224 8.67864 11.8901 8.72669 11.9652 8.75997C12.0403 8.79326 12.1214 8.81109 12.2036 8.81241C12.7151 8.83928 13.0418 8.99314 13.2474 9.19952C13.4542 9.40711 13.6084 9.74049 13.6365 10.2619C13.638 10.3439 13.6561 10.4247 13.6895 10.4995C13.723 10.5743 13.7713 10.6417 13.8314 10.6975C13.8915 10.7533 13.9622 10.7965 14.0394 10.8245C14.1166 10.8525 14.1987 10.8646 14.2807 10.8603C14.3627 10.8559 14.443 10.8352 14.5167 10.7992C14.5905 10.7632 14.6563 10.7128 14.7102 10.6509C14.764 10.589 14.8048 10.517 14.8302 10.439C14.8555 10.3611 14.8649 10.2788 14.8577 10.1972C14.8185 9.46451 14.5885 8.8173 14.1174 8.34105C13.6438 7.8648 12.999 7.63278 12.2672 7.5937Z"
+                    fill="#151413"
+                  />
+                </svg>
+
+                <p class="text-xxs form-container">Viber</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <img src="/images/Logo.svg" alt="TruboClean" />
+          <p class="text-lg font-bold">
+            <span class="orange font-bold">Trubo</span>Clean
+          </p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-contact">
+            <a
+              href="https://share.google/WrRTDkvuL2Gy12SIJ"
+              class="text-xxs"
+              style="color: #c5c3c1"
+              >Місто Бориспіль, вул. Київський шлях, 33.</a
+            >
+            <div class="footer-phones">
+              <a href="tel:+380733733728" class="text-xxs"
+                >+38 (073) 373 37 28</a
+              >
+              <a href="tel:++380663633628" class="text-xxs"
+                >+38 (066) 363 36 28</a
+              >
+            </div>
+          </div>
+          <nav>
+            <a href="#about-us" class="text-xxs font-medium">Про нас</a>
+            <a href="#services" class="text-xxs font-medium">Послуги</a>
+            <a href="#resaults" class="text-xxs font-medium">Результати</a>
+            <a href="#contacts" class="text-xxs font-medium">Контакти</a>
+          </nav>
+          <p class="text-xxs" style="color: #c5c3c1">© 2025 TruboClean</p>
+        </div>
+      </div>
+    </footer>
+    <script src="src/main.js" type="module"></script>
+  </body>
+</html>
