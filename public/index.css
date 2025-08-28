@@ -17,8 +17,9 @@
 body {
   position: relative;
   background: #151413;
-  background-image: url(/images/bg/bg-bricks.png);
-  background-size: cover;
+  background-image: url(/images/bg/bg-bricks.webp);
+  background-size: contain;
+  background-repeat: repeat-y;
   background-position: center;
 }
 

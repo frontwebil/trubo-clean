@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="/images/Logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <style>
+      body {
+        position: relative;
+        background: #151413;
+        background-image: url(/images/bg/bg-bricks.png);
+        background-size: cover;
+        background-position: center;
+      }
+      .form-thank-page {
+        position: fixed; /* Фіксоване положення */
+        z-index: 15; /* Щоб було вище за фон та інші елементи */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Центрування по середній точці */
+        width: 90%;
+        max-width: 500px; /* Максимальна ширина */
+        background: #2d2926; /* Темний фон */
+        color: #fff; /* Колір тексту */
+        padding: 30px 20px; /* Відступи всередині */
+        text-align: center;
+        border-radius: 12px; /* Закруглені кути */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Тінь */
+      }
+
+      .form-thank-page h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      .form-thank-page a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 25px;
+        background: #fff;
+        color: #2d2926;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      .form-thank-page a:hover {
+        background: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form" style="display: block">
+      <div class="form-thank-page">
+        <h2>Ми отримали вашу заявку</h2>
+        <a href="">На Головну</a>
+      </div>
+    </div>
+  </body>
+</html>
