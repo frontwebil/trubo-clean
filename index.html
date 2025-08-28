@@ -59,6 +59,293 @@
       />
     </noscript>
     <title>Trubo Clean</title>
+
+    <style>
+      header {
+        padding: 35px 0;
+        border-bottom: 1px solid #343332;
+        background: #181716;
+      }
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 35px;
+      }
+      .header-left-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 720px;
+        width: 100%;
+      }
+      .logo {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      .header-nav {
+        display: flex;
+        gap: 30px;
+      }
+      .header-right-side {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        max-width: 510px;
+        width: 100%;
+      }
+      .mobile-phones-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .order-clean {
+        border: 1px solid #ff937b;
+        background-color: #ff6745;
+        padding: 12px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .order-clean:hover {
+        background-color: #fa5939;
+        border: 1px solid #ff8d68;
+      }
+
+      .burger-button {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+      .burger-button-line {
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .burger-button.active .burger-button-line:nth-child(1) {
+        width: 30px;
+        transform: translateY(10px) rotate(45deg);
+      }
+
+      .burger-button.active .burger-button-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .burger-button.active .burger-button-line:nth-child(3) {
+        width: 30px;
+        transform: translateY(-9px) rotate(-45deg);
+      }
+
+      .burger-sliding-menu {
+        position: fixed;
+        top: 108px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(24, 23, 22, 0.97);
+        backdrop-filter: blur(20px);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 5;
+        padding: 0px 15px 40px;
+      }
+
+      .burger-sliding-menu.active {
+        transform: translateY(0);
+      }
+      .header-nav-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding-top: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .header-nav-mobile a {
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .header-nav-mobile a:hover {
+        background: rgba(34, 33, 32, 1);
+        color: #fff !important;
+      }
+
+      .burger-button-order {
+        border: 1px solid #ff937b;
+        background-color: #ff6745;
+        padding: 12px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+
+      .burger-button-order:hover {
+        background-color: #fa5939;
+        border: 1px solid #ff8d68;
+      }
+
+      .header-mobile-phones {
+        display: none;
+        justify-content: center;
+        gap: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px 15px 18px;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        .header-left-side {
+          max-width: 200px;
+          width: 100%;
+        }
+        .header-nav {
+          display: none;
+        }
+        .header-right-side {
+          justify-content: flex-end;
+        }
+        .order-clean {
+          display: none;
+        }
+        .burger-button {
+          display: flex;
+        }
+      }
+
+      @media only screen and (max-width: 660px) {
+        .burger-sliding-menu {
+          top: 129px;
+        }
+        .header-mobile-phones {
+          display: flex;
+          justify-content: flex-end;
+        }
+        .mobile-phones-links {
+          display: none;
+        }
+        header {
+          padding: 30px 0 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .header-mobile-phones {
+          justify-content: center;
+        }
+      }
+
+      .hero {
+        position: relative;
+        padding-top: 100px;
+      }
+      /* .bg-spot {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(255, 103, 69, 0.5) 0%, rgba(255,103,69,0) 70%);
+  bottom: 0px;
+  left: 0px;
+  filter: blur(350px);
+  z-index: -1;
+} */
+
+      .hero .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      .hero-content {
+        max-width: 605px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .hero-buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+      }
+      .hero-order-clean {
+        border: 1px solid #ff937b;
+        background-color: #ff6745;
+        padding: 12px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .hero-order-clean:hover {
+        background-color: #fa5939;
+        border: 1px solid #ff8d68;
+      }
+      .hero-call-me {
+        border: 1px solid #343332;
+        background-color: #222120;
+        padding: 12px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .hero-call-me:hover {
+        border: 1px solid #343332;
+        background-color: #181716;
+      }
+      .hero-img {
+        display: flex;
+        max-width: 640px;
+        width: 100%;
+      }
+
+      .hero-img img {
+        border-radius: 10px;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        .hero-img {
+          max-width: 480px;
+        }
+      }
+
+      @media only screen and (max-width: 1100px) {
+        .hero .container {
+          align-items: flex-start;
+        }
+      }
+      @media only screen and (max-width: 1100px) {
+        .hero-img {
+          display: none;
+        }
+      }
+      @media only screen and (max-width: 840px) {
+        .hero {
+          position: relative;
+          padding-top: 80px;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        .hero-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="form" id="form" style="display: none">
@@ -199,6 +486,7 @@
           class="elipse-about-us-and-advantages"
           aria-hidden="true"
           loading="lazy"
+          fetchpriority="high"
         />
         <img
           src="/images/advantages/Ellipse-2.png"
