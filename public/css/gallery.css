@@ -124,9 +124,16 @@
   border-radius: 8px;
 }
 
+.gallery-buttons-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 840px) {
   .gallerery {
-    padding: 60px 0;
+    padding: 60px 0 110px;
   }
   .gallerery-top-button-right {
     padding: 10px 12px;
@@ -136,15 +143,17 @@
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 500px) {
   .gallerery-slider-mobile {
     display: flex;
     margin-top: 30px;
   }
-  .gallerery-slider {
-    display: none;
+  .gallerery-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .gallerery-top-buttons {
+  .mobile-buttons-hide-gallery {
     display: none;
   }
   .gallerery-top {

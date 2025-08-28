@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgerButton = document.querySelector(".burger-button");
   const burgerSlidingMenu = document.querySelector(".burger-sliding-menu");
   const burgerButtons = document.querySelectorAll(".burger-buttons");
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("focused");
+    } else {
+      header.classList.remove("focused");
+    }
+  });
 
   burgerButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -13,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   burgerButton.addEventListener("click", () => {
     burgerButton.classList.toggle("active");
     burgerSlidingMenu.classList.toggle("active");
+    header.classList.add("focused");
   });
 
   const images = [
@@ -31,76 +41,78 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const screenWidth = window.innerWidth;
+  let gallereryTopButtonLeft;
+  let gallereryTopButtonRight;
+  let slidePerView = 3;
+  if (screenWidth < 800) {
+    slidePerView = 2;
+  }
+  if (screenWidth < 500) {
+    slidePerView = 1;
+  }
 
-  if (screenWidth > 540) {
-    let slidePerView = 3;
-    if (screenWidth < 800) {
-      slidePerView = 2;
-    }
-
-    const gallererySlider = document.querySelector(".gallerery-slider");
-    const gallereryTopButtonLeft = document.querySelector(
+  if (slidePerView > 1) {
+    gallereryTopButtonLeft = document.querySelector(
       ".gallerery-top-button-left"
     );
-    const gallereryTopButtonRight = document.querySelector(
+    gallereryTopButtonRight = document.querySelector(
       ".gallerery-top-button-right"
     );
-
-    function renderSlides(startIndex = 0) {
-      gallererySlider.innerHTML = "";
-
-      let maxHeight = 0; // для визначення максимальної висоти слайдів
-
-      for (let i = startIndex; i < startIndex + slidePerView; i++) {
-        const imgSrc = images[i % images.length];
-        const slide = document.createElement("div");
-        slide.className = "gallerery-slide";
-
-        const img = document.createElement("img");
-        img.src = imgSrc;
-        img.alt = `Галерея робіт TruboClean — фото ${i + 1}`;
-        img.loading = "lazy";
-        img.title = `Чистка димоходів та камінів — фото ${i + 1}`;
-
-        img.addEventListener("load", () => {
-          const h = img.naturalHeight * (slide.clientWidth / img.naturalWidth);
-          if (h > maxHeight) {
-            maxHeight = h;
-            gallererySlider.style.minHeight = maxHeight + "px";
-          }
-        });
-
-        slide.appendChild(img);
-        gallererySlider.appendChild(slide);
-      }
-    }
-
-    let currentIndex = 0;
-
-    gallereryTopButtonLeft.addEventListener("click", () => {
-      currentIndex =
-        (currentIndex - slidePerView + images.length) % images.length;
-      renderSlides(currentIndex);
-    });
-
-    gallereryTopButtonRight.addEventListener("click", () => {
-      currentIndex = (currentIndex + slidePerView) % images.length;
-      renderSlides(currentIndex);
-    });
-
-    renderSlides(currentIndex);
   } else {
-    const gallererySliderMobile = document.querySelector(
-      ".gallerery-slider-mobile"
+    gallereryTopButtonLeft = document.querySelector(
+      ".button-left-gallery-mobile"
     );
-
-    images.map((el, i) => {
-      gallererySliderMobile.innerHTML += `
-      <img src=${el} alt="Галерея робіт TruboClean — чистка димоходів, котлів та камінів, фото ${
-        i + 1
-      }" loading="lazy" aria-hidden="true">`;
-    });
+    gallereryTopButtonRight = document.querySelector(
+      ".button-right-gallery-mobile"
+    );
   }
+
+  const gallererySlider = document.querySelector(".gallerery-slider");
+  const counter = document.getElementById("counter");
+
+  function renderSlides(startIndex = 0) {
+    gallererySlider.innerHTML = "";
+
+    let maxHeight = 0; // для визначення максимальної висоти слайдів
+    counter.innerHTML = `${startIndex + 1}/12`;
+    for (let i = startIndex; i < startIndex + slidePerView; i++) {
+      const imgSrc = images[i % images.length];
+      const slide = document.createElement("div");
+      slide.className = "gallerery-slide";
+
+      const img = document.createElement("img");
+      img.src = imgSrc;
+      img.alt = `Галерея робіт TruboClean — фото ${i + 1}`;
+      img.loading = "lazy";
+      img.title = `Чистка димоходів та камінів — фото ${i + 1}`;
+
+      img.addEventListener("load", () => {
+        const h = img.naturalHeight * (slide.clientWidth / img.naturalWidth);
+        if (h > maxHeight) {
+          maxHeight = h;
+          gallererySlider.style.minHeight = maxHeight + "px";
+        }
+      });
+
+      slide.appendChild(img);
+      gallererySlider.appendChild(slide);
+    }
+  }
+
+  let currentIndex = 0;
+
+  gallereryTopButtonLeft.addEventListener("click", () => {
+    currentIndex =
+      (currentIndex - slidePerView + images.length) % images.length;
+    renderSlides(currentIndex);
+  });
+
+  gallereryTopButtonRight.addEventListener("click", () => {
+    currentIndex = (currentIndex + slidePerView) % images.length;
+    renderSlides(currentIndex);
+  });
+
+  renderSlides(currentIndex);
 
   const openFormButton = document.querySelectorAll(".openModal");
 
