@@ -36,12 +36,13 @@
   padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease!important;
 }
 
 .hero-order-clean:hover {
   background-color: #fa5939;
   border: 1px solid #ff8d68;
+  color: rgba(255, 255, 255, 1)!important;
 }
 .hero-call-me {
   border: 1px solid #343332;

@@ -131,6 +131,10 @@
   margin-top: 20px;
 }
 
+.gallery-buttons-mobile{
+  display: none;
+}
+
 @media only screen and (max-width: 840px) {
   .gallerery {
     padding: 60px 0 110px;
@@ -158,5 +162,8 @@
   }
   .gallerery-top {
     justify-content: center;
+  }
+  .gallery-buttons-mobile{
+    display: flex;
   }
 }

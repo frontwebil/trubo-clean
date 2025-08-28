@@ -50,10 +50,12 @@ header .container {
   padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease !important;
 }
 
 .order-clean:hover {
+  color: #fff !important;
+
   background-color: #fa5939;
   border: 1px solid #ff8d68;
 }
@@ -135,11 +137,12 @@ header .container {
   padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
   width: 100%;
+  transition: all 0.3s ease !important;
 }
 
 .burger-button-order:hover {
+  color: #fff !important;
   background-color: #fa5939;
   border: 1px solid #ff8d68;
 }
