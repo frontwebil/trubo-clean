@@ -2,16 +2,6 @@
   position: relative;
   padding-top: 180px;
 }
-/* .bg-spot {
-  position: absolute;
-  width: 1000px;
-  height: 1000px;
-  background: radial-gradient(circle, rgba(255, 103, 69, 0.5) 0%, rgba(255,103,69,0) 70%);
-  bottom: 0px;
-  left: 0px;
-  filter: blur(350px);
-  z-index: -1;
-} */
 
 .hero .container {
   display: flex;
@@ -36,13 +26,13 @@
   padding: 12px 18px;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease!important;
+  transition: all 0.3s ease !important;
 }
 
 .hero-order-clean:hover {
   background-color: #fa5939;
   border: 1px solid #ff8d68;
-  color: rgba(255, 255, 255, 1)!important;
+  color: rgba(255, 255, 255, 1) !important;
 }
 .hero-call-me {
   border: 1px solid #343332;
@@ -78,19 +68,44 @@
   }
 }
 @media only screen and (max-width: 1100px) {
+  .hero-content {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .header-right-side {
+    max-width: 215px;
+  }
+  .header-left-side {
+    max-width: 425px;
+  }
   .hero-img {
-    display: none;
+    width: 0%;
+    margin: 0 auto;
+    max-width: 600px;
   }
 }
 @media only screen and (max-width: 840px) {
   .hero {
     position: relative;
-    padding-top: 200px;
+    padding-top: 230px;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .hero-img {
+    width: 100%;
+  }
+  .hero .container {
+    flex-direction: column;
+  }
   .hero-buttons {
     flex-direction: column;
+  }
+  .hero-order-clean {
+    text-align: center;
+  }
+  .hero-content {
+    max-width: 600px;
   }
 }
